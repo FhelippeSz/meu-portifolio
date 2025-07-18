@@ -14,6 +14,7 @@
     <nav class="menu-navegacao">
       <ul>
         <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre Mim</a></li>
         <li><a href="#projetos">Projetos</a></li>
         <li><a href="#contato">Contato</a></li>
         <li><a href="#fale">Fale comigo</a></li>
@@ -29,97 +30,71 @@
       <a href="curriculo.pdf" download class="btn-download" target="_blank">📄 Baixar Currículo</a>
     </header>
 
-    <!-- SOBRE / PROPÓSITOS -->
-    <section class="animar">
-      <h2>Meus Propósitos</h2>
-      <p>
-        Tenho o sonho em trabalhar como desenvolvedor fullstack e crescer no
-        âmbito profissional e pessoal.
-      </p>
+    <!-- SOBRE MIM -->
+    <section id="sobre" class="animar">
+      <h2>Sobre Mim</h2>
+      <p>Olá! Me chamo <strong>Fhelippe Santos Lima</strong>, sou apaixonado por tecnologia e estou em constante aprendizado na área de desenvolvimento Fullstack.</p>
+
+      <p>Atualmente estudo e pratico linguagens como <strong>HTML, CSS, JavaScript e SQL</strong>, com foco em construção de aplicações web funcionais e bem estruturadas. Gosto de aprender novas ferramentas e aplicar boas práticas de código.</p>
+
+      <p>Além disso, me interesso por áreas como <strong>Internet das Coisas (IoT)</strong>, automação com Arduíno e design gráfico. Sou organizado, proativo e sempre busco evolução pessoal e profissional.</p>
+
+      <p>Meu objetivo é ingressar no mercado de tecnologia, atuando como desenvolvedor e crescendo junto com a equipe e os desafios. Estou aberto a oportunidades para aplicar meus conhecimentos, aprender com profissionais experientes e construir soluções reais.</p>
+
+      <p>Nas horas vagas gosto de ouvir música, desenhar e explorar novas ideias para projetos pessoais.</p>
     </section>
 
     <!-- PROJETOS -->
     <section id="projetos" class="animar">
-      <h2>Projetos</h2>
-      <div class="projetos">
-        <div class="projeto">
-          <img src="camisa.jpeg" alt="Desenho de fardamento" />
-          <h3>Projeto de Fardamento Profissional</h3>
-          <p>
-            Criação de layout e identidade visual para camisetas personalizadas.
-          </p>
-          <a href="https://seu-link-projeto1.com" target="_blank"
-            >Ver Projeto</a
-          >
-        </div>
-
-        <div class="projeto">
-          <img src="irrigação.jpg" alt="Protótipo de Irrigação" />
-          <h3>Protótipo de Irrigação Inteligente com Arduíno</h3>
-          <p>
-            Protótipo funcional utilizando Arduíno Mega e sensores para
-            automação agrícola.
-          </p>
-          <a href="https://seu-link-projeto2.com" target="_blank"
-            >Ver Projeto</a
-          >
-        </div>
-
-        <div class="projeto">
-          <img
-            src="https://via.placeholder.com/300x200"
-            alt="Meu Portfólio em Web"
-          />
-          <h3>Meu Portfólio em Web</h3>
-          <p>
-            Esse próprio site, criado para mostrar um pouco da minha história e
-            meus projetos e contatos.
-          </p>
-          <a href="https://seu-link-projeto3.com" target="_blank"
-            >Ver Projeto</a
-          >
-        </div>
+  <h2>Projetos</h2>
+  <div class="carrossel-container">
+    <button class="carrossel-btn prev">&#10094;</button>
+    
+    <div class="carrossel" id="carrosselProjetos">
+      <div class="projeto">
+        <img src="camisa.jpeg" alt="Fardamento" />
+        <h3>Fardamento Profissional</h3>
+        <p>Layout para camisetas personalizadas.</p>
+        <a href="#">Ver Projeto</a>
       </div>
-    </section>
+
+      <div class="projeto">
+        <img src="irrigação.jpg" alt="Irrigação Arduino" />
+        <h3>Irrigação Inteligente</h3>
+        <p>Protótipo com Arduíno Mega e sensores.</p>
+        <a href="#">Ver Projeto</a>
+      </div>
+
+      <div class="projeto">
+        <img src="https://via.placeholder.com/300x200" alt="Portfólio" />
+        <h3>Portfólio Web</h3>
+        <p>Este site criado com HTML, CSS e JS.</p>
+        <a href="#">Ver Projeto</a>
+      </div>
+    </div>
+
+    <button class="carrossel-btn next">&#10095;</button>
+  </div>
+</section>
 
     <!-- CONTATOS -->
     <section id="contato">
       <h2>Contatos</h2>
       <div class="redes-sociais">
-        <a
-          href="https://www.linkedin.com/in/fhelippe-santos-939a11178/"
-          target="_blank"
-          ><i class="fab fa-linkedin"></i
-        ></a>
-        <a href="mailto:fhelippelimasantos@gmail.com" target="_blank"
-          ><i class="fas fa-envelope"></i
-        ></a>
-        <a href="https://wa.me/5575998540199" target="_blank"
-          ><i class="fa-brands fa-whatsapp"></i
-        ></a>
+        <a href="https://www.linkedin.com/in/fhelippe-santos-939a11178/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:fhelippelimasantos@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+        <a href="https://wa.me/5575998540199" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
       </div>
     </section>
 
     <!-- FORMULÁRIO DE CONTATO -->
     <section id="fale">
       <h2>Fale comigo</h2>
-      <form
-        action="https://formsubmit.co/fhelippelimasantos@gmail.com"
-        method="POST"
-        class="form-contato"
-      >
+      <form action="https://formsubmit.co/fhelippelimasantos@gmail.com" method="POST" class="form-contato">
         <input type="text" name="name" placeholder="Seu nome" required />
         <input type="email" name="email" placeholder="Seu e-mail" required />
-        <textarea
-          name="message"
-          rows="5"
-          placeholder="Sua mensagem"
-          required
-        ></textarea>
-
+        <textarea name="message" rows="5" placeholder="Sua mensagem" required></textarea>
         <input type="hidden" name="_captcha" value="false" />
-        <!-- <input type="hidden" name="_next" value="https://seusite.com/obrigado.html"> -->
-
         <button type="submit">Enviar</button>
       </form>
     </section>
@@ -163,4 +138,27 @@
       });
     </script>
   </body>
+  <script>
+  const carrossel = document.getElementById("carrosselProjetos");
+  const btnPrev = document.querySelector(".carrossel-btn.prev");
+  const btnNext = document.querySelector(".carrossel-btn.next");
+
+  let index = 0;
+  const totalSlides = carrossel.children.length;
+
+  function atualizarCarrossel() {
+    const offset = -index * 100;
+    carrossel.style.transform = `translateX(${offset}%)`;
+  }
+
+  btnNext.addEventListener("click", () => {
+    index = (index + 1) % totalSlides;
+    atualizarCarrossel();
+  });
+
+  btnPrev.addEventListener("click", () => {
+    index = (index - 1 + totalSlides) % totalSlides;
+    atualizarCarrossel();
+  });
+</script>
 </html>

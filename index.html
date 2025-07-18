@@ -1,66 +1,166 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Meu Portfólio</title>
-    <link rel="stylesheet" href="style.css">
-    <img src="perfil.jpg" alt="Foto de Perfil" class="foto-perfil">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <h1>Fhelippe Santos Lima</h1>
-  <p>Desenvolvedor Fullstack | Estudante de Tecnologia</p>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
   </head>
   <body>
-    <header>
-      <h1>Minhas Habilidades</h1>
-      <p>Desenvolvedo em Html, Css, Javascript e Sql.</p>
+    <!-- MENU FIXO -->
+    <nav class="menu-navegacao">
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li><a href="#fale">Fale comigo</a></li>
+      </ul>
+    </nav>
+
+    <!-- CABEÇALHO -->
+    <header id="inicio">
+      <img src="perfil.jpg" alt="Foto de Perfil" class="foto-perfil" />
+      <h1>Fhelippe Santos Lima</h1>
+      <p>Desenvolvedor Fullstack | Estudante de Tecnologia</p>
+      <button id="modo-toggle">🌙 Modo Escuro</button>
+      <a href="curriculo.pdf" download class="btn-download" target="_blank">📄 Baixar Currículo</a>
     </header>
 
-    <section>
+    <!-- SOBRE / PROPÓSITOS -->
+    <section class="animar">
       <h2>Meus Propósitos</h2>
-      <p>Tenho o sonho em trabalhar como desenvolvedor fullstack e crescer no hambito profissional e pessoal.</p>
+      <p>
+        Tenho o sonho em trabalhar como desenvolvedor fullstack e crescer no
+        âmbito profissional e pessoal.
+      </p>
     </section>
 
-    <section>
-  <h2>Projetos</h2>
+    <!-- PROJETOS -->
+    <section id="projetos" class="animar">
+      <h2>Projetos</h2>
+      <div class="projetos">
+        <div class="projeto">
+          <img src="camisa.jpeg" alt="Desenho de fardamento" />
+          <h3>Projeto de Fardamento Profissional</h3>
+          <p>
+            Criação de layout e identidade visual para camisetas personalizadas.
+          </p>
+          <a href="https://seu-link-projeto1.com" target="_blank"
+            >Ver Projeto</a
+          >
+        </div>
 
-  <div class="projetos">
+        <div class="projeto">
+          <img src="irrigação.jpg" alt="Protótipo de Irrigação" />
+          <h3>Protótipo de Irrigação Inteligente com Arduíno</h3>
+          <p>
+            Protótipo funcional utilizando Arduíno Mega e sensores para
+            automação agrícola.
+          </p>
+          <a href="https://seu-link-projeto2.com" target="_blank"
+            >Ver Projeto</a
+          >
+        </div>
 
-    <div class="projeto">
-      <img src="irrigação.jpg" alt="Protótipo de Irrigação Inteligente com Arduíno">
-      <h3>Protótipo de Casa Inteligente com Arduíno</h3>
-      <p>Uma página simples feita em HTML e CSS mostrando meu currículo.</p>
-      <a href="https://seu-link-projeto1.com" target="_blank">Ver Projeto</a>
-    </div>
+        <div class="projeto">
+          <img
+            src="https://via.placeholder.com/300x200"
+            alt="Meu Portfólio em Web"
+          />
+          <h3>Meu Portfólio em Web</h3>
+          <p>
+            Esse próprio site, criado para mostrar um pouco da minha história e
+            meus projetos e contatos.
+          </p>
+          <a href="https://seu-link-projeto3.com" target="_blank"
+            >Ver Projeto</a
+          >
+        </div>
+      </div>
+    </section>
 
-    <div class="projeto">
-      <img src="camisa.jpeg" alt="Desinger de logotipos para fardamentos">
-      <h3>Projeto de Irrigação Inteligente</h3>
-      <p>Calculadora básica feita com HTML, CSS e JavaScript.</p>
-      <a href="https://seu-link-projeto2.com" target="_blank">Ver Projeto</a>
-    </div>
-
-    <div class="projeto">
-      <img src="https://via.placeholder.com/300x200" alt="Meu Portifólio em Web">
-      <h3>Meu Portifólio em Web</h3>
-      <p>Esse próprio site, criado para mostrar um pouco da minha história e meus projetos e contatos.</p>
-      <a href="https://seu-link-projeto3.com" target="_blank">Ver Projeto</a>
-    </div>
-
-  </div>
-</section>
-
-    <section>
+    <!-- CONTATOS -->
+    <section id="contato">
       <h2>Contatos</h2>
-        <ul>
-        <div class="redes-sociais">
-          <a href="https://www.linkedin.com/in/fhelippe-santos-939a11178/" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="mailto:fhelippelimasantos@gmail.com" target="_blank"><i class="fa-brands fa-wirsindhandwerk"></i></a>
-          <a href="http://wa.me/5575998540199" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-        </div>  
+      <div class="redes-sociais">
+        <a
+          href="https://www.linkedin.com/in/fhelippe-santos-939a11178/"
+          target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a href="mailto:fhelippelimasantos@gmail.com" target="_blank"
+          ><i class="fas fa-envelope"></i
+        ></a>
+        <a href="https://wa.me/5575998540199" target="_blank"
+          ><i class="fa-brands fa-whatsapp"></i
+        ></a>
+      </div>
     </section>
 
+    <!-- FORMULÁRIO DE CONTATO -->
+    <section id="fale">
+      <h2>Fale comigo</h2>
+      <form
+        action="https://formsubmit.co/fhelippelimasantos@gmail.com"
+        method="POST"
+        class="form-contato"
+      >
+        <input type="text" name="name" placeholder="Seu nome" required />
+        <input type="email" name="email" placeholder="Seu e-mail" required />
+        <textarea
+          name="message"
+          rows="5"
+          placeholder="Sua mensagem"
+          required
+        ></textarea>
+
+        <input type="hidden" name="_captcha" value="false" />
+        <!-- <input type="hidden" name="_next" value="https://seusite.com/obrigado.html"> -->
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <!-- RODAPÉ -->
     <footer>
       <p>© 2025 - Fhelippe</p>
     </footer>
+
+    <!-- MODO ESCURO -->
+    <script>
+      const botao = document.getElementById("modo-toggle");
+      botao.addEventListener("click", function () {
+        document.body.classList.toggle("dark-mode");
+        botao.textContent = document.body.classList.contains("dark-mode")
+          ? "☀️ Modo Claro"
+          : "🌙 Modo Escuro";
+      });
+    </script>
+
+    <!-- ANIMAÇÃO AO ROLAR -->
+    <script>
+      const elementos = document.querySelectorAll(".animar");
+
+      const observador = new IntersectionObserver(
+        (entradas) => {
+          entradas.forEach((entrada) => {
+            if (entrada.isIntersecting) {
+              entrada.target.classList.add("aparecer");
+              observador.unobserve(entrada.target);
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+        }
+      );
+
+      elementos.forEach((el) => {
+        observador.observe(el);
+      });
+    </script>
   </body>
 </html>

@@ -1,8 +1,11 @@
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Rolagem suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Transições suaves */
+body, header, section, footer {
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 body {
@@ -10,7 +13,52 @@ body {
   background-color: #f5f5f5;
   color: #333;
   padding: 20px;
+  padding-top: 70px; /* compensação do menu fixo */
   line-height: 1.6;
+}
+
+/* MENU DE NAVEGAÇÃO */
+.menu-navegacao {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.menu-navegacao ul {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 15px 0;
+}
+
+.menu-navegacao a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.menu-navegacao a:hover {
+  color: #2980b9;
+}
+
+/* Modo escuro do menu */
+.dark-mode .menu-navegacao {
+  background-color: #2a2a2a;
+}
+
+.dark-mode .menu-navegacao a {
+  color: #f5f5f5;
+}
+
+.dark-mode .menu-navegacao a:hover {
+  color: #80d4ff;
 }
 
 /* Cabeçalho */
@@ -20,6 +68,17 @@ header {
   padding: 20px;
   text-align: center;
   border-radius: 8px;
+}
+
+/* Foto de perfil */
+.foto-perfil {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  margin-bottom: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
 }
 
 /* Seções */
@@ -48,55 +107,8 @@ footer {
   color: #777;
   font-size: 0.9em;
 }
-.foto-perfil {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid white;
-  margin-bottom: 10px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.2);
-}
-@media (max-width: 600px) {
-  body {
-    padding: 10px;
-  }
 
-  header, section {
-    padding: 15px;
-  }
-
-  .foto-perfil {
-    width: 100px;
-    height: 100px;
-  }
-
-  h1 {
-    font-size: 1.5em;
-  }
-
-  h2 {
-    font-size: 1.2em;
-  }
-
-  p, li {
-    font-size: 1em;
-  }
-}
-.redes-sociais {
-  margin-top: 10px;
-}
-
-.redes-sociais a {
-  font-size: 24px;
-  margin-right: 15px;
-  color: #790000;
-  transition: color 0.3s;
-}
-
-.redes-sociais a:hover {
-  color: #43a502; /* cor azul para LinkedIn */
-}
+/* Projetos */
 .projetos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -110,6 +122,7 @@ footer {
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   text-align: center;
+  transition: all 0.4s ease;
 }
 
 .projeto img {
@@ -138,4 +151,198 @@ footer {
 
 .projeto a:hover {
   background-color: #1f5f91;
+}
+
+/* Redes Sociais */
+.redes-sociais {
+  margin-top: 10px;
+}
+
+.redes-sociais a {
+  font-size: 24px;
+  margin-right: 15px;
+  color: #790000;
+  transition: color 0.3s;
+}
+
+.redes-sociais a:hover {
+  color: #43a502;
+}
+
+/* Botão modo escuro */
+#modo-toggle {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #ffffff;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#modo-toggle:hover {
+  background-color: #ddd;
+}
+
+/* Modo escuro */
+.dark-mode {
+  background-color: #1c1c1c;
+  color: #f5f5f5;
+}
+
+.dark-mode header {
+  background-color: #333;
+}
+
+.dark-mode section {
+  background-color: #2a2a2a;
+  color: #f5f5f5;
+}
+
+.dark-mode footer {
+  color: #ccc;
+}
+
+.dark-mode a {
+  color: #80d4ff;
+}
+
+.dark-mode #modo-toggle {
+  background-color: #333;
+  color: #f5f5f5;
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode p,
+.dark-mode li {
+  color: #f5f5f5;
+}
+
+/* Formulário de Contato */
+.form-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.form-contato input,
+.form-contato textarea {
+  padding: 12px;
+  font-size: 1em;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  resize: none;
+}
+
+.form-contato button {
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1em;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.form-contato button:hover {
+  background-color: #1f5f91;
+}
+
+/* Formulário no modo escuro */
+.dark-mode .form-contato input,
+.dark-mode .form-contato textarea {
+  background-color: #444;
+  color: white;
+  border: 1px solid #666;
+}
+
+.dark-mode .form-contato button {
+  background-color: #555;
+}
+
+.dark-mode .form-contato button:hover {
+  background-color: #777;
+}
+
+/* Animação de fade-in */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Classe ativada ao rolar */
+.aparecer {
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+    padding-top: 90px;
+  }
+
+  header, section {
+    padding: 15px;
+  }
+
+  .foto-perfil {
+    width: 100px;
+    height: 100px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  p, li {
+    font-size: 1em;
+  }
+
+  .menu-navegacao ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.btn-download {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 18px;
+  background-color: #27ae60;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.btn-download:hover {
+  background-color: #1e8449;
+}
+
+/* Modo escuro */
+.dark-mode .btn-download {
+  background-color: #2ecc71;
+  color: #1c1c1c;
+}
+
+.dark-mode .btn-download:hover {
+  background-color: #27ae60;
+  color: white;
 }

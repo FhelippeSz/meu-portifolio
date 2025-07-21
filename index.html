@@ -13,12 +13,16 @@
 <body>
   <!-- MENU -->
   <nav class="menu-navegacao">
-    <ul>
+    <ul style="display:flex; align-items:center; width:100%;">
       <li><a href="#inicio">Início</a></li>
       <li><a href="#sobre">Sobre Mim</a></li>
       <li><a href="#projetos">Projetos</a></li>
       <li><a href="#contato">Contato</a></li>
       <li><a href="#fale">Fale comigo</a></li>
+      <li style="margin-left:auto; display:flex; gap:12px; align-items:center;">
+        <a href="curriculo.pdf" download class="btn-download" target="_blank" style="padding:6px 16px; border-radius:20px; border:none; background:#2980b9; color:#fff; font-size:1rem; text-decoration:none; font-weight:bold; display:inline-block;">📄 Baixar Currículo</a>
+        <button id="modo-toggle" style="padding:6px 16px; border-radius:20px; border:none; background:#222; color:#fff; font-size:1rem; cursor:pointer;">🌙 Modo Escuro</button>
+      </li>
     </ul>
   </nav>
 
@@ -27,8 +31,6 @@
     <img src="perfil.jpg" alt="Foto de Perfil" class="foto-perfil" />
     <h1>Fhelippe Santos Lima</h1>
     <p>Desenvolvedor Fullstack | Estudante de Tecnologia</p>
-    <button id="modo-toggle">🌙 Modo Escuro</button>
-    <a href="curriculo.pdf" download class="btn-download" target="_blank">📄 Baixar Currículo</a>
   </header>
 
   <!-- SOBRE MIM -->
@@ -126,6 +128,12 @@
       botao.textContent = document.body.classList.contains("dark-mode")
         ? "☀️ Modo Claro"
         : "🌙 Modo Escuro";
+    });
+
+    // Scroll para o topo ao clicar em "Início"
+    document.querySelector('a[href="#inicio"]').addEventListener('click', function(e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
     const carrossel = document.getElementById("carrosselProjetos");

@@ -13,9 +13,26 @@
   </nav>
   <main style="display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:60vh;">
     <h2 style="color:#222; margin-bottom:16px;">Uniforme Profissional</h2>
-    <img src="camisa1.jpeg" alt="Uniforme Profissional" style="max-width:300px; margin-bottom:16px;">
-    <p style="color:#222; font-size:1.1rem; text-align:center; max-width:400px;">Uniforme criado para empresa X, focando em conforto e identidade visual moderna.</p>
+    <div class="carrossel-projeto" style="position:relative; width:320px; height:220px; display:flex; align-items:center; justify-content:center; margin-bottom:16px;">
+      <button id="prevBtn" style="position:absolute; left:0; top:50%; transform:translateY(-50%); background:none; border:none; font-size:2rem; color:#2980b9; cursor:pointer;">&#10094;</button>
+      <img id="carrosselImg" src="camisa1.jpeg" alt="Uniforme Profissional" style="max-width:300px; max-height:200px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.12);">
+      <button id="nextBtn" style="position:absolute; right:0; top:50%; transform:translateY(-50%); background:none; border:none; font-size:2rem; color:#2980b9; cursor:pointer;">&#10095;</button>
+    </div>
+    <p style="color:#222; font-size:1.1rem; text-align:center; max-width:400px;">Uniforme criado pela Confecção Lima, focando em conforto e identidade visual única e moderna.</p>
     <a href="index.html" style="margin-top:24px; color:#2980b9; font-weight:bold; text-decoration:none;">Voltar ao Portfólio</a>
+    <script>
+      const imagens = ["camisa1.jpeg", "camisa2.jpeg"];
+      let imgIndex = 0;
+      const carrosselImg = document.getElementById("carrosselImg");
+      document.getElementById("prevBtn").onclick = function() {
+        imgIndex = (imgIndex - 1 + imagens.length) % imagens.length;
+        carrosselImg.src = imagens[imgIndex];
+      };
+      document.getElementById("nextBtn").onclick = function() {
+        imgIndex = (imgIndex + 1) % imagens.length;
+        carrosselImg.src = imagens[imgIndex];
+      };
+    </script>
   </main>
 </body>
 </html>

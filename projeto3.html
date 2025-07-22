@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Projeto 1 - Uniforme Profissional</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Layout e identidade visual para camisetas de uso corporativo e industrial." />
+</head>
+<body>
+  <!-- MENU -->
+  <nav class="menu-navegacao">
+    <ul>
+      <li><a href="index.html"><i class="fas fa-arrow-left"></i> Voltar ao Portfólio</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="projeto-detalhe" data-aos="fade-up">
+    <h1>Uniforme Empresárial</h1>
+    <p>Identidade visual para camisetas do tipo Polo de uso corporativo e industrial. O modelo envolveu aplicação de estampa, escolha de tipografia e estilo único.</p>
+    
+    <div class="carrossel-container">
+      <div class="carrossel" id="carrosselDetalhes">
+        <img src="projeto3-1.jpg" alt="Mockup Uniforme 1" />
+        <img src="projeto3-2.jpg" alt="Mockup Uniforme 2" />
+        <img src="projeto3-3.jpg" alt="Mockup Uniforme 3" />
+        <img src="projeto3-4.jpg" alt="Mockup Uniforme 4" />
+      </div>
+    </div>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <p>© 2025 - Fhelippe</p>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+
+    const carrossel = document.getElementById("carrosselDetalhes");
+    let index = 0;
+    const total = carrossel ? carrossel.children.length : 0;
+
+    function atualizar() {
+      const offset = -index * 100;
+      carrossel.style.transform = "translateX(" + offset + "%)";
+    }
+
+    setInterval(() => {
+      if (total > 1) {
+        index = (index + 1) % total;
+        atualizar();
+      }
+    }, 4000);
+  </script>
+
+  <script>
+  AOS.init({ duration: 800, once: true });
+
+  const carrossel = document.getElementById("carrosselDetalhes");
+  const slides = carrossel.children;
+  const total = slides.length;
+  let index = 0;
+
+  function atualizarCarrossel() {
+    carrossel.style.transition = "transform 0.5s ease-in-out";
+    const offset = -index * 100;
+    carrossel.style.transform = "translateX(" + offset + "%)";
+  }
+
+  function resetarCarrossel() {
+    carrossel.style.transition = "none";
+    carrossel.style.transform = "translateX(0%)";
+    index = 0;
+  }
+
+  setInterval(() => {
+    index++;
+    atualizarCarrossel();
+
+    if (index === total - 1) {
+      // Quando chega na imagem clonada
+      setTimeout(() => {
+        resetarCarrossel();
+      }, 600); // Tempo maior que transition
+    }
+  }, 4000);
+</script>
+
+</body>
+</html>

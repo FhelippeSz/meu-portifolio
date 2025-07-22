@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Confecção Lima | Fardamentos Personalizados</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+  <!-- MENU -->
+  <nav class="menu-navegacao">
+    <ul style="display:flex; align-items:center; width:100%;">
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#sobre">Sobre Nós</a></li>
+      <li><a href="#projetos">Modelos</a></li>
+      <li><a href="#contato">Contato</a></li>
+      <li><a href="#fale">Fale comigo</a></li>
+      <li style="margin-left:auto; display:flex; gap:12px; align-items:center;">
+        <button id="modo-toggle" style="padding:6px 16px; border-radius:20px; border:none; background:#222; color:#fff; font-size:1rem; cursor:pointer;">🌙 Modo Escuro</button>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- INÍCIO -->
+  <header id="inicio" data-aos="fade-down">
+    <img src="perfil.png" alt="Foto de Perfil" style="width:180px; height:auto; object-fit:cover; box-shadow:0 2px 12px rgba(0,0,0,0.10);" />
+    <h1>Confecção Lima</h1>
+        <h2>Personalizando ideias, criando identidade.</h2>
+  </header>
+
+  <!-- SOBRE MIM -->
+  <section id="sobre" data-aos="fade-up">
+    
+    <h2>🧵 Sobre a Confecção Lima</h2>
+    <p>A Confecção Lima é uma empresa especializada na criação de uniformes personalizados e sob medida, atendendo a diversas áreas com qualidade, criatividade e compromisso.</p>
+    <p>Oferecemos soluções completas em:</p>
+    <ul style="margin-bottom:10px;">
+      <li>👨‍🏫 Fardamento escolar</li>
+      <li>🏆 Uniformes personalizados para times e academias</li>
+      <li>🏢 Fardamento profissional para empresas, escritórios e comércios</li>
+      <li>🙌 T-shirts e camisetas temáticas para igrejas, eventos e grupos</li>
+      <li>🎨 Outros modelos sob demanda, com personalização total</li>
+    </ul>
+    <p>Trabalhamos com tecidos de alta qualidade, cortes modernos e estampas personalizadas, sempre priorizando o conforto, a identidade visual e a durabilidade de cada peça.</p>
+    <p>Nosso compromisso é vestir sua equipe com estilo, organização e profissionalismo, contribuindo para a imagem da sua instituição.</p>
+  </section>
+
+  <!-- PROJETOS COM CARROSSEL -->
+  <section id="projetos" data-aos="zoom-in">
+    <h2>Projetos</h2>
+    <div class="carrossel-container">
+      <button class="carrossel-btn prev"><i class="fas fa-chevron-left"></i></button>
+      <div class="carrossel" id="carrosselProjetos">
+        <!-- IMAGENS E TEXTOS DO CARROSSEL 1 -->
+        <div class="projeto" style="display:flex; flex-direction:column; align-items:center; text-align:center;">
+          <img src="projeto1-1.jpg" alt="Projeto 1" style="height:220px; width:auto; object-fit:cover; border-radius:10px; margin-bottom:10px;" />
+          <h3>Fardamento Profissional</h3>
+          <p>Criação de layout e identidade visual para camisetas.</p>
+          <a href="projeto1.html">Ver Modelo</a>
+        </div>
+        <!-- IMAGENS E TEXTOS DO CARROSSEL 2 -->
+        <div class="projeto" style="display:flex; flex-direction:column; align-items:center; text-align:center;">
+          <img src="projeto2-1.jpg" alt="Projeto 2" style="height:220px; width:auto; object-fit:cover; border-radius:10px; margin-bottom:10px;" />
+          <h3>Fardamento Religioso</h3>
+          <p>Modelo criado para artigos religiosos.</p>
+          <a href="projeto2.html">Ver Modelo</a>
+        </div>
+        <!-- IMAGENS E TEXTOS DO CARROSSEL 3 -->
+        <div class="projeto" style="display:flex; flex-direction:column; align-items:center; text-align:center;">
+          <img src="projeto3-1.jpg" alt="Projeto 3" style="height:220px; width:auto; object-fit:cover; border-radius:10px; margin-bottom:10px;" />
+          <h3>Fardamento Profissional</h3>
+          <p>Criação de layout e identidade visual para camisetas.</p>
+          <a href="projeto3.html">Ver Modelo</a>
+        </div>
+        <!-- IMAGENS E TEXTOS DO CARROSSEL 4 -->
+        <div class="projeto" style="display:flex; flex-direction:column; align-items:center; text-align:center;">
+          <img src="projeto4-1.jpg" alt="Projeto 4" style="height:220px; width:auto; object-fit:cover; border-radius:10px; margin-bottom:10px;" />
+          <h3>Fardamentos Bordados</h3>
+          <p>Aplicação do bordado em vestuários.</p>
+          <a href="projeto4.html">Ver Modelo</a>
+        </div>
+      </div>
+      <button class="carrossel-btn next"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" data-aos="fade-right">
+    <h2>Contatos</h2>
+    <div class="redes-sociais">
+      <a href="https://www.linkedin.com/in/fhelippe-santos-939a11178/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:fhelippelimasantos@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+      <a href="https://wa.me/5575998540199" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </section>
+
+  <!-- FORMULÁRIO -->
+  <section id="fale" data-aos="fade-left">
+    <h2>Fale comigo</h2>
+    <form action="https://formsubmit.co/fhelippelimasantos@gmail.com" method="POST" class="form-contato">
+      <input type="text" name="name" placeholder="Seu nome" required />
+      <input type="email" name="email" placeholder="Seu e-mail" required />
+      <textarea name="message" rows="5" placeholder="Sua mensagem" required></textarea>
+      <input type="hidden" name="_captcha" value="false" />
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <p>© 2025 - Fhelippe</p>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    const botao = document.getElementById("modo-toggle");
+    // Função para atualizar o texto do botão
+    function atualizarTextoBotao() {
+      botao.textContent = document.body.classList.contains("dark-mode")
+        ? "☀️ Modo Claro"
+        : "🌙 Modo Escuro";
+    }
+
+    // Verifica o localStorage ao carregar a página
+    if (localStorage.getItem('modoEscuro') === 'true') {
+      document.body.classList.add('dark-mode');
+    }
+    atualizarTextoBotao();
+
+    botao.addEventListener("click", function () {
+      document.body.classList.toggle("dark-mode");
+      localStorage.setItem('modoEscuro', document.body.classList.contains('dark-mode'));
+      atualizarTextoBotao();
+    });
+
+    // Scroll para o topo ao clicar em "Início"
+    document.querySelector('a[href="#inicio"]').addEventListener('click', function(e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    const carrossel = document.getElementById("carrosselProjetos");
+    const btnPrev = document.querySelector(".carrossel-btn.prev");
+    const btnNext = document.querySelector(".carrossel-btn.next");
+    let index = 0;
+    const totalSlides = carrossel.children.length;
+
+    function atualizarCarrossel() {
+      const offset = -index * 100;
+      carrossel.style.transform = `translateX(${offset}%)`;
+    }
+
+    btnNext.addEventListener("click", () => {
+      index = (index + 1) % totalSlides;
+      atualizarCarrossel();
+    });
+
+    btnPrev.addEventListener("click", () => {
+      index = (index - 1 + totalSlides) % totalSlides;
+      atualizarCarrossel();
+    });
+  </script>
+
+  <!-- AOS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ duration: 800, once: true });</script>
+
+<!-- Botão WhatsApp com mensagem automática funcionando -->
+<a href="https://api.whatsapp.com/send?phone=5575998540199&text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20com%20a%20Confec%C3%A7%C3%A3o%20Lima."
+   target="_blank" class="whatsapp-float" title="Fale conosco no WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+</body>
+
+</html>

@@ -1,5 +1,5 @@
 main {
-  background: #fff;
+  background: #adadad;
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.06);
   padding: 32px 24px;
@@ -72,14 +72,14 @@ body {
 }
 
 .menu-navegacao a:hover {
-  color: #4fc3f7;
+  color: white;
 }
 
 /* HEADER */
 header {
   text-align: center;
   padding: 40px 20px;
-  background: linear-gradient(135deg, #2980b9, #6dd5fa);
+  background: linear-gradient(135deg, #255fff, #14a01b);
   color: white;
   border-radius: 12px;
   margin: 0 20px 30px 20px;
@@ -91,29 +91,7 @@ header {
   height: 140px;
   object-fit: cover;
   border-radius: 50%;
-  border: 4px solid white;
   margin-bottom: 15px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-/* Botões */
-#modo-toggle,
-.btn-download {
-  margin: 10px 5px 0;
-  padding: 10px 18px;
-  border: none;
-  border-radius: 8px;
-  background-color: #fff;
-  color: #2980b9;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-#modo-toggle:hover,
-.btn-download:hover {
-  background-color: #2980b9;
-  color: white;
 }
 
 /* Seções */
@@ -137,11 +115,11 @@ section {
 /* Títulos */
 h2 {
   font-size: 1.8rem;
-  color: #2980b9;
+  color: #ca9b00;
   margin-bottom: 15px;
 }
 
-/* PROJETOS */
+/* MODELOS */
 .projetos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -182,7 +160,7 @@ h2 {
   display: inline-block;
   margin: 10px;
   padding: 10px 16px;
-  background-color: #2980b9;
+  background-color: #ca9b00;
   color: white;
   border-radius: 6px;
   text-decoration: none;
@@ -190,7 +168,7 @@ h2 {
 }
 
 .projeto a:hover {
-  background-color: #1c598c;
+  background-color: #ca9b00;
 }
 
 /* FORMULÁRIO */
@@ -234,7 +212,7 @@ h2 {
 
 .redes-sociais a {
   font-size: 28px;
-  color: #2980b9;
+  color: #ca9b00;
   transition: color 0.3s;
 }
 
@@ -265,7 +243,7 @@ footer {
 }
 
 .dark-mode h2 {
-  color: #4fc3f7;
+  color: #ca9b00;
 }
 
 .dark-mode .menu-navegacao {
@@ -285,7 +263,7 @@ footer {
 }
 
 .dark-mode .projeto a {
-  background-color: #4fc3f7;
+  background-color: #ca9b00;
   color: #1e1e1e;
 }
 
@@ -309,7 +287,7 @@ footer {
 }
 
 .dark-mode .redes-sociais a {
-  color: #4fc3f7;
+  color: #ca9b00;
 }
 
 /* RESPONSIVO */
@@ -359,8 +337,8 @@ footer {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #2980b9;
-  color: white;
+  background-color: #f0f0f000;
+  color: #ca9b00;
   border: none;
   font-size: 2rem;
   padding: 10px;
@@ -371,7 +349,7 @@ footer {
 }
 
 .carrossel-btn:hover {
-  background-color: #1f5f91;
+  background-color: #dbdbdb00;
 }
 
 .carrossel-btn.prev {
@@ -384,67 +362,14 @@ footer {
 
 /* Modo escuro */
 .dark-mode .carrossel-btn {
-  background-color: #4fc3f7;
-  color: #1e1e1e;
+  background-color: #b8b8b800;
+  color: #ca9b00;
 }
 
 .dark-mode .carrossel-btn:hover {
-  background-color: #29b6f6;
-}
-.habilidades-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 20px;
-  justify-items: center;
-  margin-top: 20px;
+  background-color: #a8a8a800;
 }
 
-.habilidade {
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  padding: 20px 10px;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  min-width: 120px;
-  min-height: 120px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.habilidade i {
-  font-size: 2.2rem;
-  color: #2980b9;
-  margin-bottom: 8px;
-}
-
-.habilidade span {
-  display: block;
-  font-weight: 600;
-  color: #333;
-}
-
-/* Hover */
-.habilidade:hover {
-  transform: translateY(-5px);
-  background-color: #eaf6ff;
-}
-
-/* Modo escuro */
-.dark-mode .habilidade {
-  background-color: #222;
-  color: #e0e0e0;
-}
-
-.dark-mode .habilidade i {
-  color: #4fc3f7;
-}
-
-.dark-mode .habilidade span {
-  color: #e0e0e0;
-}
 .carrossel-container {
   overflow: hidden;
   width: 100%;
@@ -482,21 +407,14 @@ footer {
 
 .whatsapp-float {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25d366;
-  color: white;
+  bottom: 25px;
+  right: 25px;
+  color: #25d366;
   font-size: 28px;
-  padding: 12px 14px;
+  padding: 10px 10px;
   border-radius: 50%;
   text-align: center;
   z-index: 1000;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
   text-decoration: none;
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.1);
-  background-color: #20b358;
 }
